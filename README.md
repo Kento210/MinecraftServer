@@ -1,8 +1,11 @@
 # MinecraftServer
-大学のSuwaGeeks Serverに minecraft サーバーを建て、管理しています。
+大学のSuwaGeeks ServerにMinecraftServerコンテナを建て、管理しています。
 
 # 参考
 - [Minecraftサーバーをクロスプレイで運用するまでにやったこと](https://qiita.com/mabubu0203/items/59a78b689740b42549c0)
+
+# 上記を参考に私が書いた記事
+- [Docker使って超簡単にJava版、BE版クロスプレイ対応Minecraft Serverを建ててみた](https://qiita.com/Kento210/items/cf9204ef695a9bf8f3b2)
 
 # 特徴
 `SPIGOT` サーバーで起動しています。
@@ -26,7 +29,7 @@
   `$ vi ./docker/data/plugins/Geyser-Spigot/config.yml`    
     remote.auth-type: online -> floodgate  
   `$ vi ./docker/data/plugins/floodgate/config.yml`  
-    覚えていない  
+    
   `$ docker-compose -f ./docker/docker-compose.yml start`  
   docker-composeのログより起動を確認  
 
@@ -54,8 +57,8 @@ root
 
 | name                 | version           | 用途 |
 |----------------------|-------------------|------|
-| Geyser-Spigot.jar    | 2.1.0(2022/10/12) |      |
-| floodgate-spigot.jar | 2.2.0(2022/08/10) |      |
+| Geyser-Spigot.jar    | latest |      |
+| floodgate-spigot.jar | latest |      |
 
 # サーバー接続に必要な情報
 
