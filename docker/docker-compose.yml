@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   mc-spigot:
-    image: "itzg/minecraft-server:2022.12.0-java17-openj9"
+    image: "itzg/minecraft-server:latest"
     container_name: "mc-spigot"
     tty: true
     stdin_open: true
