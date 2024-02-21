@@ -10,7 +10,7 @@ services:
       - "19132:19132/udp"
       - "19133:19133/udp"
       - "25565:25565/tcp"
-      - "25575:25575/tcp"
+      # - "25575:25575/tcp"
     environment:
       # server.properties
       ALLOW_FLIGHT: "false"
@@ -19,28 +19,28 @@ services:
       BROADCAST_CONSOLE_TO_OPS: "true"
       BROADCAST_RCON_TO_OPS: "true"
       DEBUG: "false"
-      DIFFICULTY: "easy"
+      DIFFICULTY: "easy" # 難易度
       ENABLE_COMMAND_BLOCK: "true"
       ENABLE_JMX: "false"
       ENABLE_RCON: "true"
       ENABLE_STATUS: "true"
       ENFORCE_SECURE_PROFILE: "false"
-      ENFORCE_WHITELIST: "true"
+      ENFORCE_WHITELIST: "true" # ホワイトリストの有効化
       FORCE_GAMEMODE: "true"
       FUNCTION_PERMISSION_LEVEL: 2
       GENERATE_STRUCTURES: "true"
       HARDCORE: "false"
       LEVEL_NAME: "world"
       LEVEL_TYPE: "DEFAULT"
-      MAX_PLAYERS: 15
-      MODE: "survival"
+      MAX_PLAYERS: 15 # プレイヤー最大人数
+      MODE: "survival" # ゲームモード
       ONLINE_MODE: "true"
       OP_PERMISSION_LEVEL: 4
       PREVIEWS_CHAT: "true"
-      PVP: "false"
+      PVP: "true" # ユーザー同士のダメージを有効にするか
       RCON_PASSWORD: "${RCON_PASSWORD}"
       RCON_PORT: 25575
-      SERVER_NAME: "mabubu0203 server"
+      SERVER_NAME: "SuwaGeeksMinecraft_Server"
       SERVER_PORT: 25565
       SIMULATION_DISTANCE: 12
       SNOOPER_ENABLED: "false"
@@ -54,8 +54,8 @@ services:
       # other
       ENABLE_WHITELIST: "TRUE"
       EULA: "TRUE"
-      MAX_MEMORY: "3G"
-      MEMORY: "2G"
+      MAX_MEMORY: "3G" # 最大メモリ
+      MEMORY: "2G" # メモリ
       MODS_FILE: "/extras/mods.txt"
       OVERRIDE_SERVER_PROPERTIES: "true"
       REMOVE_OLD_MODS: "true"
@@ -63,23 +63,23 @@ services:
       REMOVE_OLD_MODS_INCLUDE: "*.jar"
       TYPE: "SPIGOT"
       TZ: "Asia/Tokyo"
-      VERSION: "1.19.2"
+      VERSION: "1.20.4" # バージョン(2024/2/21最新)
     volumes:
       - "./data:/data"
       - "./mods.txt:/extras/mods.txt:ro"
     restart: unless-stopped
 
   # Backup
-  backup:
-    image: "itzg/mc-backup:latest"
-    environment:
-      RCON_PASSWORD: "${RCON_PASSWORD}"
-      RCON_PORT: 25575
-      SERVER_PORT: 25565
-      TZ: "Asia/Tokyo"
-    depends_on:
-    - mc-spigot
-    volumes:
-      - "./data:/data:ro"
-      - "./mc-backups:/backups"
-    network_mode: "service:mc-spigot"
+  # backup:
+    # image: "itzg/mc-backup:latest"
+    # environment:
+      # RCON_PASSWORD: "${RCON_PASSWORD}"
+      # RCON_PORT: 25575
+      # SERVER_PORT: 25565
+      # TZ: "Asia/Tokyo"
+    # depends_on:
+    # - mc-spigot
+    # volumes:
+      # - "./data:/data:ro"
+      # - "./mc-backups:/backups"
+    # network_mode: "service:mc-spigot"
