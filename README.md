@@ -1,6 +1,7 @@
-# minecraft_multi
-自宅の Mac Mini(Intel CPU) に minecraft サーバーを建て、管理しています。
+# MinecraftServer
+大学のSuwaGeeks Serverに minecraft サーバーを建て、管理しています。
 
+# 参考
 - [Minecraftサーバーをクロスプレイで運用するまでにやったこと](https://qiita.com/mabubu0203/items/59a78b689740b42549c0)
 
 # 特徴
@@ -11,10 +12,10 @@
 - floodgate-spigot
 
 # 準備
-1. Mac Mini に Docker for Mac をインストール
+1. Docker, Docker-composeをインストール
 1. Terminalを起動
 1. 初回起動  
-  `$ git clone https://github.com/mabubu0203/minecraft_multi.git`  
+  `$ git clone git@github.com:Kento210/MinecraftServer.git` 
   `$ cp ./docker/.env.sample ./docker/.env`  
   `$ vi ./docker/.env`  
     設定修正  
@@ -58,7 +59,7 @@ root
 
 # サーバー接続に必要な情報
 
-グローバルIP or ダイナミックDNS
+設定したドメイン
 
 # 更新について
 
