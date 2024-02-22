@@ -1,5 +1,5 @@
 # MinecraftServer
-大学のSuwaGeeks ServerにMinecraftServerコンテナを建て、管理しています。
+大学のSuwaGeeksServerにMinecraftServerコンテナを建て、管理しています。
 
 # 対応バージョン
 
