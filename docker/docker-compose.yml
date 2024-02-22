@@ -63,7 +63,7 @@ services:
       REMOVE_OLD_MODS_INCLUDE: "*.jar"
       TYPE: "SPIGOT"
       TZ: "Asia/Tokyo"
-      VERSION: "1.20.4" # バージョン(2024/2/21最新)
+      VERSION: "1.20" # バージョン(ViaVersionを入れているため少し昔のにしている)
     volumes:
       - "./data:/data"
       - "./mods.txt:/extras/mods.txt:ro"
