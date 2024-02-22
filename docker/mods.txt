@@ -1,2 +1,3 @@
 https://ci.opencollab.dev//job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/spigot/build/libs/Geyser-Spigot.jar
 https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot
+https://www.spigotmc.org/resources/viaversion.19254/download?version=521999
