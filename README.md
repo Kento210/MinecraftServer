@@ -1,6 +1,13 @@
 # MinecraftServer
 大学のSuwaGeeks ServerにMinecraftServerコンテナを建て、管理しています。
 
+# 対応バージョン
+
+| client | version |
+|-|-|
+| Java Edition (PC) | 1.20.x |
+| BE Edition (スマホなど) | 1.20.x |
+
 # 参考
 - [Minecraftサーバーをクロスプレイで運用するまでにやったこと](https://qiita.com/mabubu0203/items/59a78b689740b42549c0)
 
@@ -13,25 +20,10 @@
 以下のプラグインにより、クロスプレイを実現しています。
 - Geyser-Spigot
 - floodgate-spigot
+- ViaVersion
 
-# 準備
-1. Docker, Docker-composeをインストール
-1. Terminalを起動
-1. 初回起動  
-  `$ git clone git@github.com:Kento210/MinecraftServer.git` 
-  `$ cp ./docker/.env.sample ./docker/.env`  
-  `$ vi ./docker/.env`  
-    設定修正  
-  `$ docker-compose -f ./docker/docker-compose.yml up --build --remove-orphans`  
-  docker-composeのログより起動を確認  
-  `$ docker-compose -f ./docker/docker-compose.yml stop`  
-1. 設定修正  
-  `$ vi ./docker/data/plugins/Geyser-Spigot/config.yml`    
-    remote.auth-type: online -> floodgate  
-  `$ vi ./docker/data/plugins/floodgate/config.yml`  
-    
-  `$ docker-compose -f ./docker/docker-compose.yml start`  
-  docker-composeのログより起動を確認  
+# 初回起動について
+上記Qiitaの記事を閲覧してください
 
 # 起動と停止
 start -> `$ docker-compose -f ./docker/docker-compose.yml start`  
@@ -59,6 +51,7 @@ root
 |----------------------|-------------------|------|
 | Geyser-Spigot.jar    | latest |      |
 | floodgate-spigot.jar | latest |      |
+| ViaVersion.jar       | 4.9.2  | バージョン調節 |
 
 # サーバー接続に必要な情報
 
@@ -91,13 +84,3 @@ $ vi ./docker/.env
 ```
 $ vi ./docker/data/ops.json
 ```
-
-# 運用について
-
-## ops.json
-
-WIP
-
-## whitelist.json
-
-`$ /whitelist add {username}`
