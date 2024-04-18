@@ -53,6 +53,7 @@ root
 | floodgate-spigot.jar | latest |      |
 | ViaVersion.jar       | 4.9.2  | バージョン調節 |
 | WorldEdit       | 7.3.0  |  |
+| CoreProtect       | 22.2  |  |
 
 # サーバー接続に必要な情報
 
