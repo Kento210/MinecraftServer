@@ -49,13 +49,13 @@ services:
       SPAWN_NPCS: "true"
       SPAWN_PROTECTION: 0
       USE_NATIVE_TRANSPORT: "true"
-      VIEW_DISTANCE: 12
+      VIEW_DISTANCE: 32
       WHITELIST: "${WHITELIST}"
       # other
       ENABLE_WHITELIST: "TRUE"
       EULA: "TRUE"
-      MAX_MEMORY: "12G" # 最大メモリ
-      MEMORY: "6G" # メモリ
+      MAX_MEMORY: "24G" # 最大メモリ
+      MEMORY: "12G" # メモリ
       MODS_FILE: "/extras/mods.txt"
       OVERRIDE_SERVER_PROPERTIES: "true"
       REMOVE_OLD_MODS: "true"
