@@ -86,3 +86,9 @@ $ vi ./docker/.env
 ```
 $ vi ./docker/data/ops.json
 ```
+
+## バックアップ
+※ 別インスタンス、開発用PCからの使用を想定しています
+
+1. .env.sampleを参考にUSER、HOST、鍵のディレクトリ、ポート、保存するディレクトリ、保存先のディレクトを選択する
+1. `$ sh backup.sh`でバックアップ実行

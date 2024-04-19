@@ -2,3 +2,5 @@ docker/data
 docker/data_old
 docker/mc-backups
 docker/.env
+
+script/.env
