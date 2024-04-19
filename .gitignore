@@ -4,3 +4,4 @@ docker/mc-backups
 docker/.env
 
 script/.env
+script/backup/*
