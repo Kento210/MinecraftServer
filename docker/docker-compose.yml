@@ -7,8 +7,6 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - "19132:19132/udp"
-      - "19133:19133/udp"
       - "25565:25565/tcp"
       - "25575:25575/tcp"
     environment:
@@ -63,7 +61,7 @@ services:
       REMOVE_OLD_MODS_INCLUDE: "*.jar"
       TYPE: "SPIGOT"
       TZ: "Asia/Tokyo"
-      VERSION: "1.20" # バージョン(ViaVersionを入れているため少し昔のにしている)
+      VERSION: "1.20.4"
     volumes:
       - "./data:/data"
       - "./mods.txt:/extras/mods.txt:ro"

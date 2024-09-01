@@ -1,12 +1,14 @@
 # MinecraftServer
 大学のSuwaGeeksServerにMinecraftServerコンテナを建て、管理しています。
 
+# ブランチについて
+これはmodを極力抜いたシンプルなマイクラ鯖です
+
 # 対応バージョン
 
 | client | version |
 |-|-|
-| Java Edition (PC) | 1.20.x |
-| BE Edition (スマホなど) | 1.20.x |
+| Java Edition (PC) | 1.20.4 |
 
 # 参考
 - [Minecraftサーバーをクロスプレイで運用するまでにやったこと](https://qiita.com/mabubu0203/items/59a78b689740b42549c0)
@@ -17,10 +19,8 @@
 # 特徴
 `SPIGOT` サーバーで起動しています。
 
-以下のプラグインにより、クロスプレイを実現しています。
+以下のプラグインにより、サーバのホスティングを実現しています。
 - Geyser-Spigot
-- floodgate-spigot
-- ViaVersion
 
 # 初回起動について
 上記Qiitaの記事を閲覧してください
@@ -50,8 +50,6 @@ root
 | name                 | version           | 用途 |
 |----------------------|-------------------|------|
 | Geyser-Spigot.jar    | latest |      |
-| floodgate-spigot.jar | latest |      |
-| ViaVersion.jar       | 4.9.2  | バージョン調節 |
 | WorldEdit       | 7.3.0  |  |
 | CoreProtect       | 22.2  |  |
 
